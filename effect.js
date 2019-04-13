@@ -39,17 +39,42 @@ $('document').ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange-after');
 		$('body').css('backgroud-color','#FFF');
 		$('body').addClass('peach-after');
-		$(this).fadeOut('slow').delay(6000).promise().done(function(){
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
 			$('#bannar_coming').fadeIn('slow');
+			$('.bannar').addClass('bannar-come');
+			$(this).fadeOut('slow').delay(2000).promise().done(function(){
+				// $('#balloons_flying').fadeIn('slow');
+			});
+		});
+
+		$('.balloon-border').animate({top:-500},8000);
+		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
+		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
+		// $('#b3').addClass('balloons-rotate-behaviour-two');
+		// $('#b4').addClass('balloons-rotate-behaviour-one');
+		// $('#b5').addClass('balloons-rotate-behaviour-one');
+		// $('#b6').addClass('balloons-rotate-behaviour-two');
+		// $('#b7').addClass('balloons-rotate-behaviour-one');
+		// loopOne();
+		// loopTwo();
+		// loopThree();
+		// loopFour();
+		// loopFive();
+		// loopSix();
+		// loopSeven();
+		
+		$(this).fadeOut('slow').delay(5000).promise().done(function(){
+			// $('#cake_fadein').fadeIn('slow');
+			$('#wish_message').fadeIn('slow');
 		});
 	});
 
-	$('#bannar_coming').click(function(){
-		$('.bannar').addClass('bannar-come');
-		$(this).fadeOut('slow').delay(6000).promise().done(function(){
-			$('#balloons_flying').fadeIn('slow');
-		});
-	});
+	// $('#bannar_coming').click(function(){
+	// 	$('.bannar').addClass('bannar-come');
+	// 	$(this).fadeOut('slow').delay(6000).promise().done(function(){
+	// 		$('#balloons_flying').fadeIn('slow');
+	// 	});
+	// });
 
 	function loopOne() {
 		var randleft = 1000*Math.random();
@@ -120,36 +145,24 @@ $('document').ready(function(){
 		loopSeven();
 		
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
-			$('#cake_fadein').fadeIn('slow');
+			// $('#cake_fadein').fadeIn('slow');
+			$('#wish_message').fadeIn('slow');
 		});
 	});	
 
-	$('#cake_fadein').click(function(){
-		$('.cake').fadeIn('slow');
-		$(this).fadeOut('slow').delay(3000).promise().done(function(){
-			$('#light_candle').fadeIn('slow');
-		});
-	});
-
-	$('#light_candle').click(function(){
-		$('.fuego').fadeIn('slow');
-		$(this).fadeOut('slow').promise().done(function(){
-			$('#wish_message').fadeIn('slow');
-		});
-	});
-
+	// bannar_coming
 		
 	$('#wish_message').click(function(){
 		 vw = $(window).width()/2;
 
 		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7').stop();
-		$('#b1').attr('id','b11');
-		$('#b2').attr('id','b22')
-		$('#b3').attr('id','b33')
-		$('#b4').attr('id','b44')
-		$('#b5').attr('id','b55')
-		$('#b6').attr('id','b66')
-		$('#b7').attr('id','b77')
+		// $('#b1').attr('id','b11');
+		// $('#b2').attr('id','b22')
+		// $('#b3').attr('id','b33')
+		// $('#b4').attr('id','b44')
+		// $('#b5').attr('id','b55')
+		// $('#b6').attr('id','b66')
+		// $('#b7').attr('id','b77')
 		$('#b11').animate({top:240, left: vw-350},500);
 		$('#b22').animate({top:240, left: vw-250},500);
 		$('#b33').animate({top:240, left: vw-150},500);
